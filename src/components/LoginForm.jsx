@@ -4,6 +4,7 @@ import axios from 'axios';
 const LogninForm = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
 
     const handleSubmit = async(e) => {
         e.preventDefault();
@@ -19,7 +20,7 @@ const LogninForm = () => {
             window.location.reload();
 
         } catch (error) {
-            console.log(error);
+            setError('Oops, incorrect credentials.')
         }
     }
 
@@ -48,6 +49,9 @@ const LogninForm = () => {
                         <button type="submit" className="button">
                             <span>Start Chatting</span>
                         </button>
+                        <h2 className="error">
+                            {error}
+                        </h2>
                     </div>
 
                 </form>
