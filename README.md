@@ -1,4 +1,4 @@
-Chat application built with react and chatEngine
+Chat application built with reactjs and chatEngine
 
 # Getting Started with Create React App
 
